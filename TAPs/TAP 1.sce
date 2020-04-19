@@ -1,3 +1,4 @@
+clear
 clc
 disp('MATEMÁTICAS III - CICLO 2020-1')
 disp('Sección 1.01')

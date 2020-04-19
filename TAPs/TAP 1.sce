@@ -10,6 +10,8 @@ disp('José Porres       100%')
 disp('Joaquín Ramírez   100%')
 disp('')
 function    bool = frobenius(A,b)
+    //Toma la matriz de coeficientes y la matriz columna respectiva, juntándolos en la matriz aumentada
+    //Analiza los rangos de A y de la matriz Au aumentada
     [m,n] = size(A)
     Au = [A b]
     ranA = rank(A)
@@ -29,7 +31,7 @@ function    bool = frobenius(A,b)
     end
 end
 
-function s = sustitucion_regresiva_Mcuadrada(A, b)
+function s = sustitucion_regresiva_Mcuadrada(A, b)  
     [m, n] = size(A)
     x(n) = b(n)/A(n, n)
     for i = n-1:-1:1

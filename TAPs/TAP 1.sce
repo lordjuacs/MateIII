@@ -185,21 +185,39 @@ disp([b1 b2], "Matriz aumentada: ")
 disp("EJERCICIO C")
 [c1, c2] = gauss_pivoteo(b1, b2)
 disp(c1, "Matriz después de la eliminación gaussiana: ")
-disp(c2,"Solución X")
-c2y = 0.12*c2
-c2y(1,1) = 0.09
-disp(c2y,"Solución Y")
+disp(c2,"Solución X:")
+platoc1 = 512*c2(1,1) - 500*c2(2,1)
+platoc2 = 512*c2(2,1) - 500*c2(3,1)
+platoc3 = 512*c2(3,1) - 500*c2(4,1)
+platoc4 = 512*c2(4,1) - 500*c2(5,1)
+platoc5 = 512*c2(5,1)
+disp(platoc1, "Plato 1:")
+disp(platoc2, "Plato 2:")
+disp(platoc3, "Plato 3:")
+disp(platoc4, "Plato 4:")
+disp(platoc5, "Plato 5:")
 
 disp("EJERCICIO D")
 d1 = [512 -500 0 0 0;
--12 637 -625 0 0;
-0 -12 512 -500 0;
+-12 512 -500 0 0;
+0 -12 637 -625 0;
 0 0 -12 512 -500;
 0 0 0 -12 512]
 d2 = [9; 0; 0; 0; 0]
 disp([d1 d2], "Matriz aumentada:")
 disp("Según la teoría de Frobenius: ")
 [d3, d4, d5] = solucion_Doolittle(d1, d2)
+platod1 = 512*d5(1,1) - 500*d5(2,1)
+platod2 = 512*d5(2,1) - 500*d5(3,1)
+platod3 = 637*d5(3,1) - 625*d5(4,1)
+platod4 = 512*d5(4,1) - 500*d5(5,1)
+platod5 = 512*d5(5,1)
+disp(platod1, "Plato 1:")
+disp(platod2, "Plato 2:")
+disp(platod3, "Plato 3:")
+disp(platod4, "Plato 4:")
+disp(platod5, "Plato 5:")
+
 
 
 

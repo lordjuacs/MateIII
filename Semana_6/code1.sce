@@ -1,5 +1,5 @@
 clc
-N = 0.1
+N = 1
 j = 1
 d = zeros(1, 23)
 while(j<23)

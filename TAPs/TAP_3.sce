@@ -68,17 +68,51 @@ function rpta = flotante_simple(N)
 endfunction
 clc
 
+vec1 = [2 9 -2]'
+val1 = -8
+vec2 = [1 0 -1]'
+val2 = 1
+vec3 = [7 4 5]'
+val3 = 3
+disp("TAP 03 - MATEMÁTICAS III - SECCIÓN 1.01")
+disp("Pregunta A")
+disp(vec1, "Vector propio")
+disp(val1, "Valor propio")
+disp(vec2, "Vectori propio")
+disp(val2, "Valor propio")
+disp(vec3, "Vectori propio")
+disp(val3, "Valor propio")
+objetivo = [4000 0 -4000]'
+disp(objetivo, "Coordenada para dar el objetivo")
+disp(sum(objetivo), "Suma de coordenada para dar el objetivo")  
+
+disp("Pregunta B")
+disp(0.4419, "Aceleración")
+impacto = [100 450 -100]'
+disp("Pregunta C")
+disp(impacto, "Coordenada de impacto")
+disp(sum(impacto), "Suma de coordenada de impacto")
+disp("Pregunta D")
+disp(4.717, "Aceleración")
+disp("Pregunta E")
 A = [4 -1 0 -1 0 0 0 0 0; -1 4 -1 0 -1 0 0 0 0; 0 -1 4 0 0 -1 0 0 0; -1 0 0 4 -1 0 -1 0 0; 0 -1 0 -1 4 -1 0 -1 0; 0 0 -1 0 -1 4 0 0 -1; 0 0 0 -1 0 0 4 -1 0; 0 0 0 0 -1 0 -1 4 -1; 0 0 0 0 0 -1 0 -1 4]
+disp(A, 'Matriz  de coeficientes original')
 b = [50 20 45 20 0 35 30 20 65]'
 sem = [1 1 1 1 1 1 1 1 1]'
-S = round(gauss_seidel(A, sem, 5, b))
+S = gauss_seidel(A, sem, 5, b)
 
-disp(A, 'Matriz  de coeficientes original')
+
 disp(b, 'Vector columna valores')
+disp("Pregunta F")
+disp("Funcionas en el código TAP_3.sce")
+disp("Pregunta G")
 disp(S, 'Vector propio - 5 iteraciones')
+disp(round(S), 'Vector propio (aproximando a valores enteros) - 5 iteraciones')
+S = round(S)
 maximo = max(S)
 minimo = min(S)
 disp(S(5), 'Cantidad de aviones en P5')
+disp("Pregunta H")
 disp(maximo, 'Cantidad máxima de aviones por portavion')
 disp(minimo, 'Cantidad minima de aviones por portavion')
 flotante_maximo = flotante_simple(maximo)

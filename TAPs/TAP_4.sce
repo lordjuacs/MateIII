@@ -45,6 +45,7 @@ disp(z(11,2) ,"Error - Iteración 10")
 
 
 disp("PARTE II")
+disp("Los cáculos se hicieron en metros (m) y metros cúbicos por segundo (m^3/""))")
 disp("Pregunta A")
 disp("Mínimos cuadrados")
 x = [0.889, 1.085, 1.041, 1.397, 1.27, 0.94]'
@@ -77,7 +78,7 @@ disp(a0, "a0")
 
 
 disp("Pregunta B")
-A=[0.889 1; 1.085 1; 1.041 1; 1.397 1; 1.27 1; 0.94 1]
+A = [x ones(6,1)]
 y =[14.6 16.7 15.3 23.2 19.5 16.1]'
 [Q R] = qr(A)
 R = R(1:2,:)
@@ -92,13 +93,13 @@ x0=1.2
 flucua = 1.2*a1 + a0
 fluqr = 1.2*c(1) + c(2)
 disp("Flujo - Precipitación 120 cm")
-disp(flucua, "Por mínimos cuadrados")
+disp(flucua, "Por Mínimos Cuadrados")
 disp(fluqr, "Por QR")
-deff('y=f(x)', 'y=a0+a1*x')
-xx=[0:0.001:2]
-yy = f(xx)
-plot(xx,yy,'r')
-xgrid(10)
 disp("Pregunta D")
+disp("Flujo - Precipitación 120 cm")
+disp(21.0106419505999, "Por Laplace cuadrados")
+disp("Explicación: https://www.geogebra.org/m/wfa2g5ed")
+disp(21.0106419505999, "Por Newton")
+disp("Explicación: https://www.geogebra.org/m/x3fjjkfu")
 
 

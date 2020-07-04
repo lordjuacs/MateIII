@@ -13,7 +13,8 @@ end
 dy =6*diff(dd') ;// Matriz de diferencias divididas
 M = H\dy ;
 M =[M0 M' Mn];
-disp(M)
+disp(dy,"dy")
+disp(H,"H")
 // plot (x,y, ’or ’) // Activar para visualizar los puntos
 for i =1:n
     S(i,1) =(M(i+1) - M(i))/(6*h(i)) ;

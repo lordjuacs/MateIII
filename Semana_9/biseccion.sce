@@ -1,4 +1,4 @@
-function z = biseccion(f, a, b, maxiter)
+    function z = biseccion(f, a, b, maxiter)
     c = (a + b)/2
     error=(b-a)/2
     z = [a b c f(a) f(b) f(c) error]

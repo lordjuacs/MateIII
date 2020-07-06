@@ -143,7 +143,8 @@ for i=1:n
        end 
     end
 end
-disp(mt)
+disp(mt,"mt")
+disp(B,"B")
 M=inv(mt)*B //derivadas
 a=[] ; b=[] ; c=[] ; d=[]; pol=[]
 for i=1:n-1
@@ -213,7 +214,7 @@ scf(1)
 plot(fase,fn)
 leg=legend(['Periodic Spline'])
 xlabel('Fase (ø)') ; ylabel('Magnitud')
-title("Pregunta C - Osa Mayor")
+title("Pregunta B - Osa Mayor")
 gca().grid=[1 1 1]
 
 
